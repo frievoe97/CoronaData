@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 all_data = pd.read_excel("data.xlsx")
 all_data = all_data.drop(columns=['day', 'month', 'year', 'geoId', 'countryterritoryCode', 'popData2019', 'continentExp'])
 
-
 def getCountry(dt, country):
     dt = dt[dt.countriesAndTerritories.eq(country)]
     dt = dt.reindex(columns=['dateRep', 'cases', 'deaths', 'cases_total', 'deaths_total', 'countriesAndTerritories'])
